@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 
-@FeignClient(name = "component-client", url = "localhost:8080/component/componentprocessingmodule")
+@FeignClient(name = "component-client", url = "https://returnxcomponent.herokuapp.com/component/componentprocessingmodule")
 public interface ComponentClient {
     @PostMapping("/ProcessDetail")
     ProcessDTO processResponseDetails(@RequestBody ProcessRequest processRequestObj ,@RequestHeader(name = "Authorization", required = true) String token);

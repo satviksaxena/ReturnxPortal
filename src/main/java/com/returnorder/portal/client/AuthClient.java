@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 
 
-@FeignClient(name = "auth-client", url = "localhost:8008/authorization")
+@FeignClient(name = "auth-client", url = "https://returnxauth.herokuapp.com/authorization")
     public interface AuthClient {
 
 
