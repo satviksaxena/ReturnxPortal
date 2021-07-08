@@ -77,7 +77,13 @@ public class ProcessController {
 		
 
 	}
-
+	@GetMapping("/paymentStatus")
+	public ModelAndView showPayment() {
+		ModelAndView mv = new ModelAndView("paymentStatus");
+		//mv.addObject("model", new ProcessRequest());
+		mv.addObject("payment", paymentStatusDTO);
+		return mv;
+	}
 
 
 

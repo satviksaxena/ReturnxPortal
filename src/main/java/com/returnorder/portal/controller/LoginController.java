@@ -53,7 +53,7 @@ public class LoginController {
 		} catch (Exception e) {
 			log.info("Exception");
 
-			return new ModelAndView(new RedirectView("orderDetails"));
+			return new ModelAndView(new RedirectView("home"));
 		}
 
 		request.getSession().setAttribute("token", "Bearer " + token.getJwtAuthToken());
@@ -64,5 +64,11 @@ public class LoginController {
 		return new ModelAndView(new RedirectView("order"));
 
 	}
+	@GetMapping("/home")
+    public ModelAndView showError() {
+        ModelAndView mv = new ModelAndView("home");
+    
+        return mv;
+    }
 
 }
