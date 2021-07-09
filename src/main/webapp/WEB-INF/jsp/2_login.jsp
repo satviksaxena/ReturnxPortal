@@ -30,11 +30,10 @@
                             <form:form method="post" modelAttribute="model" action="${loginUrl}">
                                 <spring:bind path="userName">
                                     <div class="form-group ">
-                                        <p>If you are a Visitor try <br> username:visitor <br> password:visitor
-                                            <p>
-                                                <label for="userName">Username</label>
-                                                <form:input path="userName" type="text" class="form-control ${status.error ? 'is-invalid' : ''}" id="userName" placeholder="visitor" />
-                                                <form:errors path="userName" class="invalid-feedback" />
+                                        <p>
+                                            <label for="userName">Username</label>
+                                            <form:input path="userName" type="text" class="form-control ${status.error ? 'is-invalid' : ''}" id="userName" placeholder="visitor" />
+                                            <form:errors path="userName" class="invalid-feedback" />
                                     </div>
                                 </spring:bind>
                                 <spring:bind path="password">
