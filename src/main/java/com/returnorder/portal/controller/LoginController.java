@@ -30,12 +30,17 @@ public class LoginController {
 
 	@Autowired
 	LoginService loginService;
-
+	// @GetMapping("/")
+	// public ModelAndView showLogin() {
+	// 	ModelAndView mv = new ModelAndView("1_home");
+	// 	mv.addObject("model", new LoginModel());
+	// 	return mv;
+	// }
 
 
 	@GetMapping("/login")
 	public ModelAndView showLogin() {
-		ModelAndView mv = new ModelAndView("login");
+		ModelAndView mv = new ModelAndView("2_login");
 		mv.addObject("model", new LoginModel());
 		return mv;
 	}
@@ -43,7 +48,7 @@ public class LoginController {
 	@PostMapping("/login")
 	public ModelAndView performLogin(@Valid @ModelAttribute("model") LoginModel model, BindingResult result,
 			HttpServletRequest request) throws FeignException {
-		ModelAndView mv = new ModelAndView("login");
+		ModelAndView mv = new ModelAndView("2_login");
 
 		log.info(" ========Before Token generation ======");
 		AuthenticationResponseDTO token = null;
@@ -53,7 +58,7 @@ public class LoginController {
 		} catch (Exception e) {
 			log.info("Exception");
 
-			return new ModelAndView(new RedirectView("home"));
+			return new ModelAndView(new RedirectView("login-error"));
 		}
 
 		request.getSession().setAttribute("token", "Bearer " + token.getJwtAuthToken());
@@ -64,9 +69,9 @@ public class LoginController {
 		return new ModelAndView(new RedirectView("order"));
 
 	}
-	@GetMapping("/home")
+	@GetMapping("/login-error")
     public ModelAndView showError() {
-        ModelAndView mv = new ModelAndView("home");
+        ModelAndView mv = new ModelAndView("3_loginError");
     
         return mv;
     }

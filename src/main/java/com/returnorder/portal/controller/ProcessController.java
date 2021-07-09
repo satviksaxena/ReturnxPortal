@@ -42,7 +42,7 @@ public class ProcessController {
 
 	@GetMapping("/order")
 	public ModelAndView showProcessing() {
-		ModelAndView mv = new ModelAndView("orderDetails");
+		ModelAndView mv = new ModelAndView("4_orderDetails");
 		mv.addObject("model", new ProcessRequest());
 		return mv;
 	}
@@ -50,7 +50,7 @@ public class ProcessController {
 	@PostMapping("/order")
 	public ModelAndView performLogin(@Valid @ModelAttribute("model") ProcessRequest model, BindingResult result,
 			HttpServletRequest request) throws FeignException{
-		ModelAndView mv = new ModelAndView("orderDetails");
+		ModelAndView mv = new ModelAndView("4_orderDetails");
 		if (result.hasErrors()) {
 			return mv;
 		}
@@ -63,12 +63,12 @@ public class ProcessController {
 			mv.addObject("payment", paymentStatusDTO);
 			log.info(model.toString());
       
-				mv.setViewName("cart");
+				mv.setViewName("5_cart");
 				return mv;
 	
 
 		} catch (Exception e) {
-			mv.setViewName("cart");
+			mv.setViewName("5_cart");
 				return mv;
 			
 			
@@ -79,7 +79,7 @@ public class ProcessController {
 	}
 	@GetMapping("/paymentStatus")
 	public ModelAndView showPayment() {
-		ModelAndView mv = new ModelAndView("paymentStatus");
+		ModelAndView mv = new ModelAndView("6_paymentStatus");
 		//mv.addObject("model", new ProcessRequest());
 		mv.addObject("payment", paymentStatusDTO);
 		return mv;

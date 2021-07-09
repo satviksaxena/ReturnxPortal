@@ -1,69 +1,70 @@
-*
-{
+* {
     padding: 0;
     margin: 0;
-    
 }
+
+body {
+    background-color: lightblue !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
-.navbar-brand img
-{
-    width:250px;
+
+.navbar-brand img {
+    width: 250px;
 }
-.navbar-brand
-{
+
+.navbar-brand {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 10PX;
-    
 }
-.navbar
-{
-   padding: 3em !important; 
+
+.navbar {
+    padding: 3em !important;
 }
-.navbar-toggler
-{
+
+.navbar-toggler {
     border: none !important;
     outline: none !important;
 }
-.banner
-{
+
+.banner {
     padding-left: 120px;
     padding-right: 120px;
 }
 
-.banner-text
-{
+.banner-text {
     font-weight: large !important;
-    font-size: 30px !important;
+    font-size: 35px !important;
     color: #fff;
     padding-left: 50%;
     padding-top: 32px;
     padding-bottom: 32px;
 }
-.banner-text .btn-primary
-{
-    background-image: linear-gradient(to right, #3636f3,#be43f1);
+
+.banner-text .btn-primary {
+    background-image: linear-gradient(to right, #3636f3, #be43f1);
     border: none !important;
     box-shadow: none !important;
     font-size: large;
     padding: 150px 300px;
     margin-top: 100px;
 }
+
 body {
-    
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     line-height: 1.5em;
 }
-#jumbotron{
+
+#jumbotron {
     opacity: 60% !important;
 }
 
 #particles-js canvas {
-    
     display: block;
     /* vertical-align: bottom; */
     -webkit-transform: scale(1);
@@ -75,7 +76,6 @@ body {
 }
 
 #particles-js {
-    
     width: 100%;
     height: 100%;
     position: fixed;
@@ -84,12 +84,17 @@ body {
     left: 0;
     background: url(bg1.jpg)
 }
+
+
 /* #particles-js{
     height: 100%;
     background-size: cover;
     background-position: center;
 } */
+
+
 /* @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap'); */
+
 
 /* {
     background: linear-gradient(0deg, #fff, 50%, #DEEEFE);
@@ -99,15 +104,12 @@ body {
 } */
 
 .container-fluid {
-    
     overflow: hidden;
     margin-top: 250px;
     background: #262626;
     color: #627482 !important;
-    
     margin-bottom: 0;
     padding-bottom: 0;
-    
 }
 
 small {
@@ -133,9 +135,11 @@ h3 {
 .rights {
     font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
 }
+
+
 /* ...................................... */
 
-footer{
+footer {
     position: relative;
     width: 100%;
     height: auto;
@@ -146,29 +150,29 @@ footer{
     flex-wrap: wrap;
 }
 
-footer .container{
+footer .container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
-footer .container .sec{
+footer .container .sec {
     margin-right: 30px;
 }
 
-footer .container .sec.aboutus{
+footer .container .sec.aboutus {
     width: 40%;
 }
 
-footer .container h2{
+footer .container h2 {
     position: relative;
     color: #fff;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-footer .container h2:before{
+footer .container h2:before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -178,20 +182,20 @@ footer .container h2:before{
     background: rgb(101, 84, 177);
 }
 
-footer p{
-   color: #999;  
+footer p {
+    color: #999;
 }
 
-.sci{
+.sci {
     margin-top: 20px;
     display: flex;
 }
 
-.sci li{
+.sci li {
     list-style: none;
 }
 
-.sci li a{
+.sci li a {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -204,69 +208,69 @@ footer p{
     border-radius: 4px;
 }
 
-.sci li a:hover{
+.sci li a:hover {
     background: rgb(101, 84, 177);
 }
 
-.sci li a .fa{
+.sci li a .fa {
     color: #fff;
     font-size: 20px;
 }
 
-.quickLinks{
+.quickLinks {
     position: relative;
     width: 25%;
 }
 
-.quickLinks ul li{
+.quickLinks ul li {
     list-style: none;
 }
 
-.quickLinks ul li a{
+.quickLinks ul li a {
     color: #999;
     text-decoration: none;
     margin-bottom: 10px;
     display: inline-block;
 }
 
-.quickLinks ul li a:hover{
+.quickLinks ul li a:hover {
     color: #fff;
 }
 
-.contact{
+.contact {
     width: calc(35% - 60px);
     margin-right: 0!important;
 }
 
-.contact .info{
+.contact .info {
     position: relative;
 }
 
-.contact .info li{
+.contact .info li {
     display: flex;
     margin-bottom: 16px;
 }
 
-.contact .info li span:nth-child(1){
+.contact .info li span:nth-child(1) {
     color: #fff;
     font-size: 20px;
     margin-right: 10px;
 }
 
-.contact .info li span{
+.contact .info li span {
     color: #999;
 }
 
-.contact .info li a{
+.contact .info li a {
     color: #999;
     text-decoration: none;
 }
 
-.contact .info li a:hover{
+.contact .info li a:hover {
     color: #fff;
 }
 
-.copyrightText{
+.copyrightText {
     width: 100%;
     background: #181818;
     padding: 8px 100px;
@@ -274,30 +278,26 @@ footer p{
     color: #999;
 }
 
-@media (max-width: 991px){
-    footer{
+@media (max-width: 991px) {
+    footer {
         padding: 40px;
     }
-
-    footer .container{
+    footer .container {
         flex-direction: column;
     }
-
-    footer .container .sec{
+    footer .container .sec {
         margin-right: 0;
         margin-bottom: 40px;
     }
-
-    footer .container .sec.aboutus, .quickLinks, .contact{
+    footer .container .sec.aboutus,
+    .quickLinks,
+    .contact {
         width: 100%;
     }
-    .copyrightText{
-        padding:  8px 40px;
+    .copyrightText {
+        padding: 8px 40px;
     }
 }
-
-
-
 
 
 /* h1 {
@@ -305,6 +305,8 @@ footer p{
     margin: 0 auto;
     text-align: center;
 } */
+
+
 /* 
 body {
     background: url(bg.jpg);
@@ -508,10 +510,14 @@ ul.slicknav_nav {
     position: relative;
     display: block;
     /* vertical-align: middle; */
-    /* float: right;
+
+
+/* float: right;
     padding: .438em .625em;
     line-height: 1.125em
 } */
+
+
 /* 
 .slicknav_btn .slicknav_icon-bar+.slicknav_icon-bar {
     margin-top: .188em
@@ -684,6 +690,8 @@ ul.slicknav_nav {
     width: 100%;
     clear: both;
 } */
+
+
 /* .jumbotron {
     background: none;
 } */
